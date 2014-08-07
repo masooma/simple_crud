@@ -1,0 +1,2 @@
+== 20140722094203 AdminUserPage: reverting ====================================
+-- remove_index(:admin_users_pages, {:column=>["admin_user_id", "page_id"]})

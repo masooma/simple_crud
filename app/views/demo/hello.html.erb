@@ -1,0 +1,16 @@
+<h1 style="text-align:center;">Demo hello Application</h1>
+<p style="text-align:center;">Hello Rails</p>
+<br />
+
+<% @array.each do |n| %>
+<%= n %>
+<br />
+<% end %> 
+
+<%= link_to("Go to Index Page", {:action => 'index'}) %><br />
+
+id: <%= @id %>
+Page: <%= @page %>
+<br />
+
+<%= params.inspect %>
