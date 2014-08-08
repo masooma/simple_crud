@@ -1,13 +1,13 @@
-<div class = "subjects delete">
+<div class = "sections delete">
 
-<h2 style="text-align:center;">Delete Subject</h2><br />
+<h2 style="text-align:center;">Delete Section</h2><br />
 
 <%= link_to "<-- Back to Main Page", {:action => "index"} %><br /><br /><br />
 
-<%= form_for(:subject, :url => {:action => 'destroy', :id => @subject.id}) do |f| %>
-<p> Are you sure that you want to delete <%= @subject.name %> </p>
+<%= form_for(:section, :url => {:action => 'destroy', :id => @section.id}) do |f| %>
+<p> Are you sure that you want to delete <%= @section.name %> </p>
 <div >
-<%= submit_tag("Delete Subject") %>
+<%= submit_tag("Delete Section") %>
 </div>
 
 <% end %>

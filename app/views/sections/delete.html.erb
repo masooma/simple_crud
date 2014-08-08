@@ -1,2 +1,15 @@
-<h1>Sections#delete</h1>
-<p>Find me in app/views/sections/delete.html.erb</p>
+<div class = "subjects delete">
+
+<h2 style="text-align:center;">Delete Subject</h2><br />
+
+<%= link_to "<-- Back to Main Page", {:action => "index"} %><br /><br /><br />
+
+<%= form_for(:subject, :url => {:action => 'destroy', :id => @subject.id}) do |f| %>
+<p> Are you sure that you want to delete <%= @subject.name %> </p>
+<div >
+<%= submit_tag("Delete Subject") %>
+</div>
+
+<% end %>
+
+</div>
