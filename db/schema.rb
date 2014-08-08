@@ -13,18 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20140722112410) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admin_users", force: true do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "user_id"
   end
-
-  create_table "admin_users_page", id: false, force: true do |t|
-    t.integer "admin_user_id"
-    t.integer "page_id"
-  end
-
-  add_index "admin_users_page", ["admin_user_id", "page_id"], name: "index_admin_users_page_on_admin_user_id_and_page_id", using: :btree
 
   create_table "admin_users_pages", id: false, force: true do |t|
     t.integer "admin_user_id"
