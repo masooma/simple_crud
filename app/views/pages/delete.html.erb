@@ -1,0 +1,15 @@
+<div class = "pages delete">
+
+<h2 style="text-align:center;">Delete Page</h2><br />
+
+<%= link_to "<-- Back to Main Page", {:action => "index"} %><br /><br /><br />
+
+<%= form_for(:page, :url => {:action => 'destroy', :id => @page.id}) do |f| %>
+<p> Are you sure that you want to delete <%= @page.name %> </p>
+<div >
+<%= submit_tag("Delete Page") %>
+</div>
+
+<% end %>
+
+</div>

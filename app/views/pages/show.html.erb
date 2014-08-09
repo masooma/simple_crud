@@ -1,0 +1,33 @@
+<% if !flash[:notice].blank? %>
+	<div>
+	<%= flash[:notice] %>
+	</div>
+<%end%>
+
+<div class = "pages show">
+
+	<h2 style="text-align:center;">Show Pages</h2><br /><br />
+<%= link_to "<-- Back to Main Page", {:action => "index"} %>
+		<table summary="Page Record" align="center" cellpadding="15px" style="font-family:chambria; text-align:center; text-decoration:none;">
+			<tr style="color:#000080;">
+				<th>Subject ID</th>
+				<th>Page</th>
+				<th>Position</th>
+				<th>Permalink</th>
+				<th>Visible</th>
+				<th>Created At</th>
+				<th>Updated At</th>
+			</tr>
+			<tr>
+			<td><%= @page.subject_id %></td>
+			<td><%= @page.name %></td>
+			<td><%= @page.position %></td>
+			<td><%= @page.permalink %>
+			<td><%= @page.visible ? 'Yes' : 'No' %></td>
+			<td><%= @page.created_at %></td>
+			<td><%= @page.updated_at %></td>
+			</tr>	
+		</table>
+
+</div>
+

@@ -1,2 +1,35 @@
-<h1>Sections#show</h1>
-<p>Find me in app/views/sections/show.html.erb</p>
+<% if !flash[:notice].blank? %>
+	<div>
+	<%= flash[:notice] %>
+	</div>
+<%end%>
+
+<div class = "sections show">
+
+	<h2 style="text-align:center;">Show Sections</h2><br /><br />
+<%= link_to "<-- Back to Main Page", {:action => "index"} %>
+		<table summary="Subject Record" align="center" cellpadding="15px" style="font-family:chambria; text-align:center; text-decoration:none;">
+			<tr style="color:#000080;">
+				<th>Page no.</th>
+				<th>Position</th>
+				<th>Section</th>
+				<th>Visible</th>
+				<th>Content Type</th>
+				<th>Content</th>
+				<th>Created At</th>
+				<th>Updated At</th>
+			</tr>
+			<tr>
+			<td><%= @section.page_id %></td>
+			<td><%= @section.position %></td>
+			<td><%= @section.name %></td>
+			<td><%= @section.visible ? 'Yes' : 'No' %></td>
+			<td><%= @section.content_type %></td>
+			<td><%= @section.content %></td>
+			<td><%= @section.created_at %></td>
+			<td><%= @section.updated_at %></td>
+			</tr>	
+		</table>
+
+</div>
+
